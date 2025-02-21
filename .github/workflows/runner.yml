@@ -1,8 +1,8 @@
 name: Simple Runner
 
 on: 
-  - push
-  - workflow_dispatch:  # Allows manual execution
+  push
+  workflow_dispatch  # Allows manual execution
 
 jobs:
   run-simple:
