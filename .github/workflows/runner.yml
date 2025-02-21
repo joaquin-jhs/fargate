@@ -9,5 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print GitHub API URL
-        run: echo "GitHub API URL: https://api.github.com"
-
+        run: echo "GitHub API "
