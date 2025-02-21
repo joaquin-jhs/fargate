@@ -1,0 +1,13 @@
+name: Simple Runner
+
+on: 
+  push
+  workflow_dispatch  # Allows manual execution
+
+jobs:
+  run-simple:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print GitHub API URL
+        run: echo "GitHub API URL: https://api.github.com"
+
