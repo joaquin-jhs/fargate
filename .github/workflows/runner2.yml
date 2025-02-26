@@ -1,0 +1,36 @@
+name: Log Generator
+
+on:
+  workflow_dispatch:
+
+jobs:
+  log_steps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Step 1 - Starting process
+        run: |
+          echo "Step 1: Initializing process"
+          echo "INFO: Preparing environment"
+
+      - name: Step 2 - Simulating work
+        run: |
+          echo "Step 2: Performing tasks"
+          for i in {1..5}; do
+            echo "INFO: Processing item $i"
+            sleep 1
+          done
+
+      - name: Step 3 - Generate error
+        run: |
+          echo "Step 3: Simulating an error"
+          echo "ERROR: Something went wrong!" >&2
+          exit 1
+        continue-on-error: true # Continue after failure
+
+      - name: Step 4 - Finalization
+        run: |
+          echo "Step 4: Finalizing"
+          echo "INFO: Cleanup complete"
