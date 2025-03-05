@@ -11,8 +11,10 @@ jobs:
      - name: Show runner information
        run: |
          echo "OS: $RUNNER_OS"
+         echo "Runner Name: $RUNNER_NAME"
          echo "Image: $ImageOS"
          echo "Version: $ImageVersion"
+         echo "Scale Set Info: $ACTIONS_RUNNER_DEBUG"
      - name: Print GitHub API URL
        run: echo "GitHub API"
 
