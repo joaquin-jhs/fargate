@@ -8,6 +8,11 @@ jobs:
   run-simple:
     runs-on: ubuntu-latest
     steps:
-      - name: Print GitHub API URL
-        run: echo "GitHub API"
+     - name: Show runner information
+       run: |
+         echo "OS: $RUNNER_OS"
+         echo "Image: $ImageOS"
+         echo "Version: $ImageVersion"
+     - name: Print GitHub API URL
+       run: echo "GitHub API"
 
